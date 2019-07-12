@@ -16,7 +16,7 @@ const client = new vision.ImageAnnotatorClient();
 const LINE_MESSAGING_API = 'https://api.line.me/v2/bot/message';
 const LINE_HEADER = {
   'Content-Type': 'application/json',
-  'Authorization': `Bearer aUb36Qh7ErG38TSYOlnqN0Jcr+p7LYWr9/9MgCYEXJWFIWq5l4x2HVxLcsOe9jhpEX3cR6tURtB7mVYT76rvjQNrnqQgL4Ej4dzQr1xemT3y0Yng9sowMGwODTaJOugDEcy+LnTYOIok6pe8lOB+5QdB04t89/1O/w1cDnyilFU=`
+  'Authorization': `Bearer mIgbS9R5L9DlX6QdkeC1rEPGMnr2e8WayAr8QsdwKsX8Kt/sVgDjy4d4e7cJHULCnqKyabfh4hWz5zeLrJ7IcGNPuTIyt2J2Yq0q28CTsxoTCTCczZfIv2Tp1TOoI/rkAzmfKZKOkdceKVmO6MDfHQdB04t89/1O/w1cDnyilFU=`
 };
 
 exports.webhook = functions.https.onRequest((req, res) => {
@@ -46,7 +46,7 @@ exports.webhook = functions.https.onRequest((req, res) => {
 const postToDialogflow = req => {
   req.headers.host = "bots.dialogflow.com";
   return request.post({
-    uri: "https://bots.dialogflow.com/line/dc2b7260-9ceb-4b36-8573-27d0cb636ec6/webhook",
+    uri: "https://bots.dialogflow.com/line/2ef4fd4d-3dbd-42cf-9ac3-5896fb7eefb5/webhook",
     headers: req.headers,
     body: JSON.stringify(req.body)
   });
